@@ -1,0 +1,22 @@
+{
+  "name": "allbirds",
+  "version": "1.0.0",
+  "description": "Portfolio Allirds",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sharipsss/Allbirds.git"
+  },
+  "author": "Sharipsss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sharipsss/Allbirds/issues"
+  },
+  "homepage": "https://github.com/Sharipsss/Allbirds#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
