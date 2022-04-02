@@ -46,6 +46,7 @@ function browserSync(params) {
 function watchFiles(params) {
 	gulp.watch([path.watch.html], html)
 	gulp.watch([path.watch.css], css)
+	gulp.watch([path.watch.img], images)
 }
 
 function clean(params) {
@@ -70,9 +71,27 @@ function css() {
 		.pipe(browsersync.stream())
 }
 
-let build = gulp.series(clean, gulp.parallel(css, html))
+function images() {
+	return src(path.src.img)
+		.pipe(dest(path.build.img))
+		.pipe(browsersync.stream())
+}
+
+function fonts() {
+	return src(path.src.fonts)
+		.pipe(dest(path.build.fonts))
+}
+
+gulp.task('fonts', function () {
+	return gulp.src('#src/fonts')
+		.pipe(gulp.dest('dist/fonts'))
+})
+
+let build = gulp.series(clean, gulp.parallel(css, html, images, fonts))
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.fonts = fonts
+exports.images = images
 exports.css = css;
 exports.html = html;
 exports.build = build;

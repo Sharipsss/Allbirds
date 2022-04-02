@@ -1,11 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:regular,700&display=swap);
-
+@import "iconfont";
+@import "header";
+@import "top-bar";
 //ШРИФТ ПО УМОЛЧАНИЮ
 $fontfamily: "Roboto";
 
 //ПЕРЕМЕННЫЕ
 $minWidth: 320px;
-$maxWidth: 1440зч;
+$maxWidth: 1440px;
 $maxWidthContainer: 1236px;
 $md1: $maxWidthContainer + 12px;
 $md2: 991.98;
