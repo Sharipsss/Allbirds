@@ -1,3 +1,94 @@
+//СТИЛИ
 .header {
-	max-width: 1309x;
+
+	&__content {
+		max-width: 1452px;
+		padding: 0 10px 0 6px;
+
+		
+	}
+
+	&__logo{
+		font-size: 40px;
+		padding: 10px;
+
+	}
+
+	&__menu {
+	}
+
+	position: fixed;
+	background-color: #ffffff;
+	width: 100%;
+	max-height: 60px;
+
+}
+
+.icon-logo{
+	color: #212A2F;
+}
+
+._container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu {
+
+	&__body {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: flex-start;
+
+		height: 60px;
+		align-items: center;
+		li {
+		}
+	}
+
+	&__link {
+
+
+		padding: 19px 25px;
+
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 21px;
+		/* identical to box height, or 175% */
+
+		text-align: center;
+		letter-spacing: 1.7px;
+		text-transform: uppercase;
+
+		color: #212A2F;
+
+	}
+	&__link:hover{
+		background-color: #f0f0f0;
+	}
+
+	&__link:active{
+		background-color: #e8e8e8;
+	}
+
+	&__link_btn{
+		font-size: 24px;
+		padding: 10px 10px;
+
+		color: #212A2F;
+	}
+
+	&__link_btn:hover{
+		background-color: #f0f0f0;
+	}
+
+	&__link_btn:active{
+		background-color: #e8e8e8;
+	}
 }

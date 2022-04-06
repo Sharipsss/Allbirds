@@ -1,15 +1,89 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:regular,700&display=swap);
 @import "iconfont";
-@import "header";
-@import "top-bar";
+
+//ОБНУЛЕНИЕ
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*, *:before, *:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus, :active{ outline: none;}
+a:focus, a:active{outline: none;}
+
+nav, footer, header, aside{display: block;}
+
+html, body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1, h2, h3, h4, h5, h6{font-size: inherit; font-weight: 400;}
+
 //ШРИФТ ПО УМОЛЧАНИЮ
 $fontfamily: "Roboto";
 
 //ПЕРЕМЕННЫЕ
 $minWidth: 320px;
-$maxWidth: 1440px;
-$maxWidthContainer: 1236px;
-$md1: $maxWidthContainer + 12px;
+$maxWidth: 1440;
+$maxWidthContainer: 1236;
+$md1: $maxWidthContainer + 12;
 $md2: 991.98;
-$md2: 767.98;
-$md2: 479.98;
+$md3: 767.98;
+$md4: 479.98;
+
+//ОБОБЛОЧКА
+.wrapper{
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+//ОСНОВНАЯ СЕТКА
+._container{
+
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+
+	@media(max-width: $md1+px){
+		max-width: 970px;
+	}
+	@media(max-width: $md2+px){
+		max-width: 750px;
+	}
+	@media(max-width: $md3+px){
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+
+.page{
+	margin-top: 64px;
+}
+
+@import "header";
+@import "runner"
